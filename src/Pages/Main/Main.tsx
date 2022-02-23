@@ -1,6 +1,6 @@
 export default function Main() {
     return (
-        <div>
+        <div className={'flexCenter'}>
             sadas
         </div>
     );
