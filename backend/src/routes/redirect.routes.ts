@@ -1,4 +1,4 @@
-import express,{Application,Request,Response,NextFunction,Router} from "express";
+import {Request,Response,Router} from "express";
 const Link = require('../models/Link')
 const router = Router()
 

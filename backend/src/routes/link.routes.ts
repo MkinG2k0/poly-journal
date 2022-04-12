@@ -1,12 +1,13 @@
 import {Request, Response} from "express";
-import {Router} from "express/ts4.0";
+import {Router} from "express";
 import {Link} from "../models/Link";
+import {auth_middleware} from "../middleware/auth.midleware";
 const config = require('config')
-const auth = require('../middleware/auth.midleware')
 const shortid = require('shortid')
+
 const router = Router()
 
-router.post('/generate', auth, async (req:Request<{user:any}>, res:Response) => {
+router.post('/generate', auth_middleware, async (req:Request<any>, res:Response) => {
 	try {
 		const baseUrl = config.get('baseUrl')
 
@@ -33,7 +34,7 @@ router.post('/generate', auth, async (req:Request<{user:any}>, res:Response) => 
 	}
 })
 
-router.get('/', auth, async (req, res) => {
+router.get('/', auth_middleware, async (req:Request<any>, res:Response) => {
 	try {
 		const links = await Link.find({
 			// owner: req.user.userId
@@ -45,7 +46,7 @@ router.get('/', auth, async (req, res) => {
 	}
 })
 
-router.get('/:id', auth, async (req, res) => {
+router.get('/:id', auth_middleware, async (req:Request<any>, res:Response) => {
 	try {
 		const link = await Link.findById(req.params.id)
 

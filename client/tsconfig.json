@@ -13,6 +13,7 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
+    "baseUrl": "src",
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
@@ -21,7 +22,22 @@
     "outDir": "./dist/",
     "jsx": "react-jsx",
     "declaration": true,
-  },
+    "paths": {
+      "@helper": [
+        "Helper/helper"
+      ],
+      "@comp/*": [
+        "Components/*"
+      ],
+      "@hook/*": [
+        "Hooks/*"
+      ],
+      "@style/*": [
+        "Style/*"
+      ]
+    }
+},
+
   "include": [
     "src"
   ],

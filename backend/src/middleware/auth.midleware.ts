@@ -1,8 +1,12 @@
-const jwt = require('jsonwebtoken')
+import jwt from "jsonwebtoken";
+
 const config = require('config')
+
 import {Request,Response,NextFunction} from "express";
 
-export const auth_middleware =  (req:Request<{},{asd:string}>, res:Response, next:NextFunction) => {
+export const auth_middleware =  (req:Request<{
+	id: number;
+},{asd:string}>, res:Response, next:NextFunction) => {
 	if (req.method === 'OPTIONS') {
 		return next()
 	}

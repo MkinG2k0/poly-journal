@@ -19,4 +19,4 @@ export const linkSchema = new Schema<ILink>({
 })
 
 
-export const User = model<ILink>('Link', linkSchema);
+export const Link = model<ILink>('Link', linkSchema);

@@ -1,12 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-// import './Components/Css/zero.css'
-import './Components/Css/style.css'
+import React,{StrictMode} from 'react';
+import {createRoot} from 'react-dom/client';
+import App from "./App";
+import "normalize.css";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const container = document.getElementById('app')as Element;
+const root = createRoot(container);
+root.render(<StrictMode> <App/> </StrictMode>);

@@ -1,10 +1,11 @@
 const path = require("path");
 const { TsconfigPathsPlugin } = require("tsconfig-paths-webpack-plugin");
+const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
   mode: "production",
-  entry: "./src/index.tsx",
-
+  entry: "./src/app.ts",
+target:"node",
   output: {
     filename: "index.js",
     path: path.resolve(__dirname, "dist"),
@@ -12,26 +13,17 @@ module.exports = {
     clean: true,
   },
   resolve: {
-    extensions: [".ts", ".tsx", ".js"],
+    extensions: [".ts", ".js"],
     plugins: [new TsconfigPathsPlugin()],
+
   },
-  externals: {
-    react: "react",
-  },
+  externals: [nodeExternals()],
   module: {
     rules: [
       {
-        test: /\.(ts|tsx)?$/,
+        test: /\.(ts)?$/,
         use: "ts-loader",
         exclude: /node_modules/,
-      },
-      {
-        test: /\.s[ac]ss$/i,
-        use: ["style-loader", "css-loader", "sass-loader"],
-      },
-      {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
       },
     ],
   },
