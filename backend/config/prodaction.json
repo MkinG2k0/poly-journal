@@ -1,0 +1,6 @@
+{
+  "port": 5000,
+  "mongoUri": "mongodb+srv://mking:mking2000@cluster0.fnbgp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  "jwtSecret": "mking",
+  "baseUrl": "http://localhost:5000"
+}
