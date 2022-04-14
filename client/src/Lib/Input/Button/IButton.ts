@@ -11,9 +11,6 @@ export interface IButton {
     size?: Size;
     type?: typeB;
     status?: statusB;
-    icon?: any;
-    spin?: boolean;
-    classIcon?: string;
     zero?: boolean;
     Before?: ReactElement
     After?: ReactElement
