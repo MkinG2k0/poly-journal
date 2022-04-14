@@ -1,0 +1,9 @@
+@use "../../../Style/mix";
+
+.wrap {
+    background: mix.$color-gray;
+    border: none;
+    height: auto !important;
+    @extend .f-3;
+
+}

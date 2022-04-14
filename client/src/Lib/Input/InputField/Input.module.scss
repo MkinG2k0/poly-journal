@@ -1,0 +1,52 @@
+@use "../../../Style/mix";
+
+.wrap {
+  display: flex;
+  align-items: center;
+  gap: .1em;
+
+  .input {
+    @extend .f-4;
+    width: calc(100% - .3em * 2);
+    padding: .2em .3em;
+    border: none;
+    background: mix.$color-gray;
+    transition: 0.2s all ease-in-out;
+    border-radius: .2em;
+    font-weight: 400;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 2px mix.$color-second;
+    }
+
+    &:hover {
+      box-shadow: 0 2px mix.$color-second;
+    }
+  }
+
+}
+
+.s-1 {
+  border: .15em solid mix.$color-second;
+
+  .input {
+    color: black;
+  }
+
+  &:hover {
+    border: .15em solid #e0e0e0;
+  }
+}
+
+.s-2 {
+  border: .15em solid white;
+
+  .input {
+    color: white;
+  }
+
+  &:hover {
+    border: .15em solid #e0e0e0;
+  }
+}

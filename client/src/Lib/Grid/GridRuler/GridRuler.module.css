@@ -1,0 +1,21 @@
+.GridRuler {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+}
+.GridRuler_item {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.GridRuler_spacing_sm {
+  gap: 16px;
+}
+.GridRuler_spacing_md {
+  gap: 32px;
+}
+.GridRuler_spacing_lg {
+  gap: 48px;
+}
+
+/*# sourceMappingURL=GridRuler.module.css.map */

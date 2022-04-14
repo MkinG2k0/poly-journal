@@ -1,0 +1,409 @@
+.Grid_container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+.Grid_container_spacing_sm {
+  gap: 0.5rem;
+}
+.Grid_container_spacing_md {
+  gap: 1rem;
+}
+.Grid_container_spacing_lg {
+  gap: 1.5rem;
+}
+.Grid_container_spacing_none {
+  gap: 0rem;
+}
+.Grid_item {
+  display: block;
+}
+.Grid_xs_1_spacing_sm {
+  flex-basis: 8.3333333333%-0.5rem;
+}
+.Grid_xs_1_spacing_md {
+  flex-basis: 8.3333333333%-1rem;
+}
+.Grid_xs_1_spacing_lg {
+  flex-basis: 8.3333333333%-1.5rem;
+}
+.Grid_xs_1_spacing_none {
+  flex-basis: 8.3333333333%-0rem;
+}
+.Grid_xs_2_spacing_sm {
+  flex-basis: 16.6666666667%-0.5rem;
+}
+.Grid_xs_2_spacing_md {
+  flex-basis: 16.6666666667%-1rem;
+}
+.Grid_xs_2_spacing_lg {
+  flex-basis: 16.6666666667%-1.5rem;
+}
+.Grid_xs_2_spacing_none {
+  flex-basis: 16.6666666667%-0rem;
+}
+.Grid_xs_3_spacing_sm {
+  flex-basis: 25%-0.5rem;
+}
+.Grid_xs_3_spacing_md {
+  flex-basis: 25%-1rem;
+}
+.Grid_xs_3_spacing_lg {
+  flex-basis: 25%-1.5rem;
+}
+.Grid_xs_3_spacing_none {
+  flex-basis: 25%-0rem;
+}
+.Grid_xs_4_spacing_sm {
+  flex-basis: 33.3333333333%-0.5rem;
+}
+.Grid_xs_4_spacing_md {
+  flex-basis: 33.3333333333%-1rem;
+}
+.Grid_xs_4_spacing_lg {
+  flex-basis: 33.3333333333%-1.5rem;
+}
+.Grid_xs_4_spacing_none {
+  flex-basis: 33.3333333333%-0rem;
+}
+.Grid_xs_5_spacing_sm {
+  flex-basis: 41.6666666667%-0.5rem;
+}
+.Grid_xs_5_spacing_md {
+  flex-basis: 41.6666666667%-1rem;
+}
+.Grid_xs_5_spacing_lg {
+  flex-basis: 41.6666666667%-1.5rem;
+}
+.Grid_xs_5_spacing_none {
+  flex-basis: 41.6666666667%-0rem;
+}
+.Grid_xs_6_spacing_sm {
+  flex-basis: 50%-0.5rem;
+}
+.Grid_xs_6_spacing_md {
+  flex-basis: 50%-1rem;
+}
+.Grid_xs_6_spacing_lg {
+  flex-basis: 50%-1.5rem;
+}
+.Grid_xs_6_spacing_none {
+  flex-basis: 50%-0rem;
+}
+.Grid_xs_7_spacing_sm {
+  flex-basis: 58.3333333333%-0.5rem;
+}
+.Grid_xs_7_spacing_md {
+  flex-basis: 58.3333333333%-1rem;
+}
+.Grid_xs_7_spacing_lg {
+  flex-basis: 58.3333333333%-1.5rem;
+}
+.Grid_xs_7_spacing_none {
+  flex-basis: 58.3333333333%-0rem;
+}
+.Grid_xs_8_spacing_sm {
+  flex-basis: 66.6666666667%-0.5rem;
+}
+.Grid_xs_8_spacing_md {
+  flex-basis: 66.6666666667%-1rem;
+}
+.Grid_xs_8_spacing_lg {
+  flex-basis: 66.6666666667%-1.5rem;
+}
+.Grid_xs_8_spacing_none {
+  flex-basis: 66.6666666667%-0rem;
+}
+.Grid_xs_9_spacing_sm {
+  flex-basis: 75%-0.5rem;
+}
+.Grid_xs_9_spacing_md {
+  flex-basis: 75%-1rem;
+}
+.Grid_xs_9_spacing_lg {
+  flex-basis: 75%-1.5rem;
+}
+.Grid_xs_9_spacing_none {
+  flex-basis: 75%-0rem;
+}
+.Grid_xs_10_spacing_sm {
+  flex-basis: 83.3333333333%-0.5rem;
+}
+.Grid_xs_10_spacing_md {
+  flex-basis: 83.3333333333%-1rem;
+}
+.Grid_xs_10_spacing_lg {
+  flex-basis: 83.3333333333%-1.5rem;
+}
+.Grid_xs_10_spacing_none {
+  flex-basis: 83.3333333333%-0rem;
+}
+.Grid_xs_11_spacing_sm {
+  flex-basis: 91.6666666667%-0.5rem;
+}
+.Grid_xs_11_spacing_md {
+  flex-basis: 91.6666666667%-1rem;
+}
+.Grid_xs_11_spacing_lg {
+  flex-basis: 91.6666666667%-1.5rem;
+}
+.Grid_xs_11_spacing_none {
+  flex-basis: 91.6666666667%-0rem;
+}
+.Grid_xs_12_spacing_sm {
+  flex-basis: 100%-0.5rem;
+}
+.Grid_xs_12_spacing_md {
+  flex-basis: 100%-1rem;
+}
+.Grid_xs_12_spacing_lg {
+  flex-basis: 100%-1.5rem;
+}
+.Grid_xs_12_spacing_none {
+  flex-basis: 100%-0rem;
+}
+@media screen and (min-width: 600px) {
+  .Grid_sm_1_spacing_sm {
+    flex-basis: 8.3333333333%-0.5rem;
+  }
+  .Grid_sm_1_spacing_md {
+    flex-basis: 8.3333333333%-1rem;
+  }
+  .Grid_sm_1_spacing_lg {
+    flex-basis: 8.3333333333%-1.5rem;
+  }
+  .Grid_sm_1_spacing_none {
+    flex-basis: 8.3333333333%-0rem;
+  }
+  .Grid_sm_2_spacing_sm {
+    flex-basis: 16.6666666667%-0.5rem;
+  }
+  .Grid_sm_2_spacing_md {
+    flex-basis: 16.6666666667%-1rem;
+  }
+  .Grid_sm_2_spacing_lg {
+    flex-basis: 16.6666666667%-1.5rem;
+  }
+  .Grid_sm_2_spacing_none {
+    flex-basis: 16.6666666667%-0rem;
+  }
+  .Grid_sm_3_spacing_sm {
+    flex-basis: 25%-0.5rem;
+  }
+  .Grid_sm_3_spacing_md {
+    flex-basis: 25%-1rem;
+  }
+  .Grid_sm_3_spacing_lg {
+    flex-basis: 25%-1.5rem;
+  }
+  .Grid_sm_3_spacing_none {
+    flex-basis: 25%-0rem;
+  }
+  .Grid_sm_4_spacing_sm {
+    flex-basis: 33.3333333333%-0.5rem;
+  }
+  .Grid_sm_4_spacing_md {
+    flex-basis: 33.3333333333%-1rem;
+  }
+  .Grid_sm_4_spacing_lg {
+    flex-basis: 33.3333333333%-1.5rem;
+  }
+  .Grid_sm_4_spacing_none {
+    flex-basis: 33.3333333333%-0rem;
+  }
+  .Grid_sm_5_spacing_sm {
+    flex-basis: 41.6666666667%-0.5rem;
+  }
+  .Grid_sm_5_spacing_md {
+    flex-basis: 41.6666666667%-1rem;
+  }
+  .Grid_sm_5_spacing_lg {
+    flex-basis: 41.6666666667%-1.5rem;
+  }
+  .Grid_sm_5_spacing_none {
+    flex-basis: 41.6666666667%-0rem;
+  }
+  .Grid_sm_6_spacing_sm {
+    flex-basis: 50%-0.5rem;
+  }
+  .Grid_sm_6_spacing_md {
+    flex-basis: 50%-1rem;
+  }
+  .Grid_sm_6_spacing_lg {
+    flex-basis: 50%-1.5rem;
+  }
+  .Grid_sm_6_spacing_none {
+    flex-basis: 50%-0rem;
+  }
+  .Grid_sm_7_spacing_sm {
+    flex-basis: 58.3333333333%-0.5rem;
+  }
+  .Grid_sm_7_spacing_md {
+    flex-basis: 58.3333333333%-1rem;
+  }
+  .Grid_sm_7_spacing_lg {
+    flex-basis: 58.3333333333%-1.5rem;
+  }
+  .Grid_sm_7_spacing_none {
+    flex-basis: 58.3333333333%-0rem;
+  }
+  .Grid_sm_8_spacing_sm {
+    flex-basis: 66.6666666667%-0.5rem;
+  }
+  .Grid_sm_8_spacing_md {
+    flex-basis: 66.6666666667%-1rem;
+  }
+  .Grid_sm_8_spacing_lg {
+    flex-basis: 66.6666666667%-1.5rem;
+  }
+  .Grid_sm_8_spacing_none {
+    flex-basis: 66.6666666667%-0rem;
+  }
+  .Grid_sm_9_spacing_sm {
+    flex-basis: 75%-0.5rem;
+  }
+  .Grid_sm_9_spacing_md {
+    flex-basis: 75%-1rem;
+  }
+  .Grid_sm_9_spacing_lg {
+    flex-basis: 75%-1.5rem;
+  }
+  .Grid_sm_9_spacing_none {
+    flex-basis: 75%-0rem;
+  }
+  .Grid_sm_10_spacing_sm {
+    flex-basis: 83.3333333333%-0.5rem;
+  }
+  .Grid_sm_10_spacing_md {
+    flex-basis: 83.3333333333%-1rem;
+  }
+  .Grid_sm_10_spacing_lg {
+    flex-basis: 83.3333333333%-1.5rem;
+  }
+  .Grid_sm_10_spacing_none {
+    flex-basis: 83.3333333333%-0rem;
+  }
+  .Grid_sm_11_spacing_sm {
+    flex-basis: 91.6666666667%-0.5rem;
+  }
+  .Grid_sm_11_spacing_md {
+    flex-basis: 91.6666666667%-1rem;
+  }
+  .Grid_sm_11_spacing_lg {
+    flex-basis: 91.6666666667%-1.5rem;
+  }
+  .Grid_sm_11_spacing_none {
+    flex-basis: 91.6666666667%-0rem;
+  }
+  .Grid_sm_12_spacing_sm {
+    flex-basis: 100%-0.5rem;
+  }
+  .Grid_sm_12_spacing_md {
+    flex-basis: 100%-1rem;
+  }
+  .Grid_sm_12_spacing_lg {
+    flex-basis: 100%-1.5rem;
+  }
+  .Grid_sm_12_spacing_none {
+    flex-basis: 100%-0rem;
+  }
+}
+@media screen and (min-width: 960px) {
+  .Grid_md_1 {
+    flex-basis: 8.3333333333%;
+  }
+  .Grid_md_2 {
+    flex-basis: 16.6666666667%;
+  }
+  .Grid_md_3 {
+    flex-basis: 25%;
+  }
+  .Grid_md_4 {
+    flex-basis: 33.3333333333%;
+  }
+  .Grid_md_5 {
+    flex-basis: 41.6666666667%;
+  }
+  .Grid_md_6 {
+    flex-basis: 50%;
+  }
+  .Grid_md_7 {
+    flex-basis: 58.3333333333%;
+  }
+  .Grid_md_8 {
+    flex-basis: 66.6666666667%;
+  }
+  .Grid_md_9 {
+    flex-basis: 75%;
+  }
+  .Grid_md_10 {
+    flex-basis: 83.3333333333%;
+  }
+  .Grid_md_11 {
+    flex-basis: 91.6666666667%;
+  }
+  .Grid_md_12 {
+    flex-basis: 100%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .Grid_lg_1 {
+    flex-basis: 8.3333333333%;
+  }
+  .Grid_lg_2 {
+    flex-basis: 16.6666666667%;
+  }
+  .Grid_lg_3 {
+    flex-basis: 25%;
+  }
+  .Grid_lg_4 {
+    flex-basis: 33.3333333333%;
+  }
+  .Grid_lg_5 {
+    flex-basis: 41.6666666667%;
+  }
+  .Grid_lg_6 {
+    flex-basis: 50%;
+  }
+  .Grid_lg_7 {
+    flex-basis: 58.3333333333%;
+  }
+  .Grid_lg_8 {
+    flex-basis: 66.6666666667%;
+  }
+  .Grid_lg_9 {
+    flex-basis: 75%;
+  }
+  .Grid_lg_10 {
+    flex-basis: 83.3333333333%;
+  }
+  .Grid_lg_11 {
+    flex-basis: 91.6666666667%;
+  }
+  .Grid_lg_12 {
+    flex-basis: 100%;
+  }
+}
+.Grid_justifyContent_flex-start {
+  justify-content: flex-start;
+}
+.Grid_justifyContent_flex-end {
+  justify-content: flex-end;
+}
+.Grid_justifyContent_center {
+  justify-content: center;
+}
+.Grid_justifyContent_space-between {
+  justify-content: space-between;
+}
+.Grid_alignItems_flex-start {
+  align-items: flex-start;
+}
+.Grid_alignItems_flex-end {
+  align-items: flex-end;
+}
+.Grid_alignItems_center {
+  align-items: center;
+}
+
+/*# sourceMappingURL=Grid.module.css.map */

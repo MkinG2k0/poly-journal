@@ -1,0 +1,50 @@
+$duration: 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000;
+$type: 'fade', 'zoom';
+
+@each $dur in $duration {
+  .fade-#{$dur} {
+    transition: opacity $dur+ms ease;
+    opacity: 0;
+  }
+}
+
+.wh {
+  width: 100vw;
+  height: 100vh;
+}
+
+.fade-open {
+  opacity: 1;
+}
+
+@each $dur in $duration {
+  .zoom-#{$dur} {
+    transition: all $dur+ms ease;
+    transform: scale(0);
+  }
+}
+
+.zoom-open {
+  transform: scale(1);
+}
+
+.AnimStart {
+  opacity: 0;
+  animation: 1s ease normal pulse;
+  animation-fill-mode: forwards;
+}
+
+.AnimEnd {
+  opacity: 1;
+  animation: 1s ease forwards pulse;
+  animation-fill-mode: forwards;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

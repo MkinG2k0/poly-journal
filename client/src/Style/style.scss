@@ -1,0 +1,181 @@
+/* -- My preset -- */
+/* -- Flex -- */
+
+@use "sass:math";
+
+$names: (
+        center: center,
+        flex-end: end,
+        space-between:spaceB,
+        space-around: spaceA,
+);
+
+$direction: left, center, right;
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row {
+  @extend .flex;
+  flex-direction: row;
+}
+
+.col {
+  @extend .flex;
+  flex-direction: column;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@each $value, $name in $names {
+  .justify {
+    &-#{$name} {
+      justify-content: $value;
+
+    }
+  }
+}
+
+@each $dir in $direction {
+  .align {
+    &-#{$dir} {
+      align-items: $dir;
+    }
+  }
+}
+
+/* Flex-Dynamic */
+.colIn > div {
+  @extend .col;
+}
+
+.rowIn > div {
+  @extend .flex;
+}
+
+/* Flex-gap */
+
+.gap {
+  @for $i from 1 through 10 {
+    &-#{$i} {
+      gap: math.div($i , 3) + em;
+    }
+  }
+}
+
+/* -- Axis -- */
+$side: top, bottom, left, right;
+$side-short: 't', 'b', 'l', 'r';
+$side-axis: x, y;
+
+/* -- Margin -- */
+.m-0 {
+  margin: 0 !important;
+}
+
+@for $s from 1 through 4 {
+  @for $i from 1 through 10 {
+    .m#{nth($side-short,$s)}-#{$i} {
+      margin-#{nth($side,$s)}: math.div($i,3) + em;
+    }
+  }
+}
+
+@each $s in $side-axis {
+  @for $i from 1 through 10 {
+    .m#{$s}-#{$i} {
+      @if ($s=='x') {
+        margin: math.div($i, 3)+em 0;
+      }
+      @if ($s=='y') {
+        margin: 0 math.div($i, 3)+em;
+      }
+    }
+  }
+}
+
+
+/* -- Padding -- */
+.p-0 {
+  padding: 0 !important;
+}
+
+@for $s from 1 through 4 {
+  @for $i from 1 through 10 {
+    .p#{nth($side-short,$s)}-#{$i} {
+      padding-#{nth($side,$s)}: math.div($i, 2)+em;
+    }
+  }
+}
+
+@each $s in $side-axis {
+  @for $i from 1 through 10 {
+    .p#{$s}-#{$i} {
+      @if ($s=='x') {
+        padding: math.div($i, 3)+em 0;
+      }
+      @if ($s=='y') {
+        padding: 0 math.div($i, 3)+em;
+      }
+    }
+  }
+}
+
+/* Font */
+$fontSize: 1.3, 1, 0.6, 0.4, 0.3, 0.2, 0.1;
+
+.f {
+  @for $i from 1 through 7 {
+    &-#{$i } {
+      font-size: #{nth($fontSize,$i)}+em;
+      font-weight: 500;
+    }
+  }
+}
+
+/* Size 100% */
+.w100 {
+  width: 100%;
+}
+
+.h100 {
+  height: 100%;
+}
+
+.wh100 {
+  width: 100%;
+  height: 100%;
+}
+
+/* visibility */
+
+.hide {
+  opacity: 0;
+}
+
+.unHide {
+  opacity: 1;
+}
+
+.cut {
+  display: none;
+}
+
+.add {
+  display: block;
+}
+
+/* color */
+.black {
+  color: black;
+}
+
+.white {
+  color: white;
+}

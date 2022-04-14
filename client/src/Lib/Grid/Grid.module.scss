@@ -1,0 +1,107 @@
+@use 'sass:math';
+
+$spacing: (
+        "sm": .5rem,
+        "md": 1rem,
+        "lg": 1.5rem,
+        "none":0rem,
+);
+
+$breakpoints: (
+        "sm": 600px,
+        "md": 960px,
+        "lg": 1280px,
+);
+
+$justifyContent: (flex-start, flex-end, center, space-between);
+$alignItems: (flex-start, flex-end, center);
+
+@mixin breakpoint($name) {
+  @media screen and (min-width: map-get($breakpoints, $name)) {
+    @content;
+  }
+}
+
+.Grid {
+  &_container {
+    display: flex;
+    flex-wrap: wrap;
+
+    height: 100%;
+
+    @each $name, $value in $spacing {
+      &_spacing_#{$name} {
+        gap: $value;
+      }
+    }
+  }
+
+  &_item {
+    display: block;
+  }
+
+  @for $i from 1 to 13 {
+    &_xs_#{$i} {
+      @each $name, $value in $spacing {
+        &_spacing_#{$name} {
+          flex-basis: math.div($i,12) * 100% - #{$value};
+        }
+      }
+      //flex-basis: $i/12 * 100%;
+    }
+  }
+
+  @include breakpoint("sm") {
+    @for $i from 1 to 13 {
+      &_sm_#{$i} {
+        @each $name, $value in $spacing {
+          &_spacing_#{$name} {
+            flex-basis: math.div($i,12) * 100% - #{$value};
+            //flex-basis: calc(#{$i/12} * 100% - #{$value});
+          }
+        }
+        //flex-basis: $i/12 * 100%;
+      }
+    }
+  }
+
+  @include breakpoint("md") {
+    @for $i from 1 to 13 {
+      &_md_#{$i} {
+        flex-basis: math.div($i,12) * 100%;
+      }
+    }
+  }
+
+  @include breakpoint("lg") {
+    @for $i from 1 to 13 {
+      &_lg_#{$i} {
+        flex-basis: math.div($i,12) * 100%;
+      }
+    }
+  }
+
+  //@each $name, $value in $spacing {
+  //  &_spacing_#{$name} {
+  //    padding: 0 calc(10vw - #{$value});
+  //
+  //    @if ($value == 0rem) {
+  //      padding: 0;
+  //    }
+  //  }
+  //}
+
+  @each $value in $justifyContent {
+    &_justifyContent_#{$value} {
+      justify-content: $value;
+    }
+  }
+
+  @each $value in $alignItems {
+    &_alignItems_#{$value} {
+      align-items: $value;
+    }
+  }
+
+
+}

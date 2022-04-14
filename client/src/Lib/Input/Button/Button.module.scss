@@ -1,0 +1,77 @@
+@use "../../../Style/mix";
+
+$primary: mix.$color-second;
+$danger: mix.$color-red;
+$success: mix.$color-green;
+$warning: mix.$color-orange;
+
+$names: (
+        primary: $primary,
+        danger: $danger,
+        success:$success,
+        warning: $warning,
+);
+
+
+.btn {
+  border: none;
+  background: none;
+  border-radius: 0.3em;
+  padding: 0.2em 0;
+  cursor: pointer;
+  min-width: 0.7em;
+  min-height: 0.7em;
+  transition: 0.2s all ease-in-out;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  & > img {
+    width: 0.6em;
+  }
+
+  .bTitle {
+    padding: 0 0.4em;
+  }
+}
+
+// Type
+
+.circle {
+  border-radius: 50%;
+  padding: 0.15em;
+  color: white;
+
+  @each $name, $value in $names {
+    ._#{ $name} {
+      background: $value;
+
+      &:hover {
+        background: $value;
+      }
+    }
+  }
+
+}
+
+.link {
+  color: black;
+  background: none;
+
+}
+
+.square {
+  color: white;
+  background: $primary;
+  border-radius: .1em;
+  box-shadow: $primary 0 3px 6px;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+
+.smooth {
+  border-radius: 0.4em;
+}
+

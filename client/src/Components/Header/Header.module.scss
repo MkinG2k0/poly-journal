@@ -1,0 +1,46 @@
+@use 'src/Style/mix';
+
+.wrap {
+  height: 1.2em;
+  position: relative;
+
+  .header {
+    position: fixed;
+    width: 100%;
+    height: 1.2em;
+    background: mix.$color-heading;
+    border-bottom: 2px solid mix.$color-gray;
+    //box-shadow: 0 2px 5px 5px mix.$color-gray;
+
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+
+    .searchWrap {
+      margin-left: 10%;
+      flex-basis: 25%;
+    }
+
+    .navProfile {
+      display: flex;
+      align-content: center;
+      justify-content: space-around;
+      align-items: center;
+      gap: .5em;
+      margin-right: .3em;
+
+
+      .profile {
+        display: flex;
+        flex-direction: column;
+
+        @extend .f-5;
+
+        span:last-child {
+          color: mix.$color-gray-checked;
+        }
+      }
+    }
+  }
+}

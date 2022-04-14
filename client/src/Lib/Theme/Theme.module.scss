@@ -1,0 +1,22 @@
+@use "../../Style/mix";
+
+.wrap {
+  font-size: clamp(1.5rem, 2vw + 1rem, 3rem);
+}
+
+.wrap > *::-webkit-scrollbar {
+  width: 0.5rem; /* ширина scrollbar */
+}
+
+.wrap > *::-webkit-scrollbar-track {
+  background: mix.$color-second; /* цвет дорожки */
+}
+
+.wrap > *::-webkit-scrollbar-thumb {
+  background: mix.$color-base; /* padding вокруг плашки */
+}
+
+.wrap > *::selection {
+  background: mix.$color-second; /* Safari */
+  color: white;
+}

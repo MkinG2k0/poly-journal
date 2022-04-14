@@ -1,0 +1,10 @@
+
+.container {
+  min-height: calc(100vh - 3.8em);
+  position: relative;
+
+  & > * {
+    margin: 0 calc(25vw - 2.5em);
+  }
+}
+

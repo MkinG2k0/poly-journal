@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@types/react-router-dom": "^5.3.3"
+  },
+  "devDependencies": {
+    "sass": "^1.50.0"
+  }
+}

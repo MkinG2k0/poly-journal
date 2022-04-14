@@ -1,0 +1,43 @@
+@use '../../Style/mix';
+
+.wrap {
+  padding: .4em;
+  background: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  .tab {
+    display: flex;
+    border-bottom: .1em solid mix.$color-gray;
+
+    .nav {
+      padding: .5em;
+      cursor: pointer;
+      border: none;
+      background: none;
+      color: mix.$color-base;
+      box-sizing: border-box;
+      transition: all .3s;
+      @extend .f-4;
+
+      &:hover {
+        @extend .active;
+      }
+    }
+
+    .active {
+      box-shadow: 0 .2em mix.$color-base;
+    }
+  }
+
+  .wrapEdite {
+
+  }
+}
+
+.spinner {
+  color: mix.$color-base;
+  @extend .f-1;
+}

@@ -1,10 +1,16 @@
-import React from 'react';
-import Main from "./Pages/Main/Main";
+import {FC} from 'react';
+import {Routes} from 'Routes/Routes';
+import {BrowserRouter} from "react-router-dom";
+import {Theme} from "./Lib/Lib";
+import "normalize.css";
+import 'Components/Style/Font.scss'
+import "Components/Style/Colors.css";
 
-export default function App() {
-  return (
-   <>
-     <Main/>
-   </>
-  );
-}
+export const App: FC = () =>
+    (
+        <BrowserRouter>
+            <Theme>
+                <Routes isAuth={true}/>
+            </Theme>
+        </BrowserRouter>
+    );

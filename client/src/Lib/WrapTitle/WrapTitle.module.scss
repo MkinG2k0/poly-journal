@@ -1,0 +1,21 @@
+@use "../../Style/mix";
+
+.wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  box-sizing: border-box;
+  border-radius: .3em;
+  width: 100%;
+  height: 100%;
+  transition: 0.2s all ease-in-out;
+  background: none;
+
+  .title {
+    color: mix.$color-font;
+    margin-bottom: 0.5rem;
+    @extend .f-4;
+  }
+}
+

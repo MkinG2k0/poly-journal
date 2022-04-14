@@ -1,0 +1,135 @@
+.fade-100 {
+  transition: opacity 100ms ease;
+  opacity: 0;
+}
+
+.fade-200 {
+  transition: opacity 200ms ease;
+  opacity: 0;
+}
+
+.fade-300 {
+  transition: opacity 300ms ease;
+  opacity: 0;
+}
+
+.fade-400 {
+  transition: opacity 400ms ease;
+  opacity: 0;
+}
+
+.fade-500 {
+  transition: opacity 500ms ease;
+  opacity: 0;
+}
+
+.fade-600 {
+  transition: opacity 600ms ease;
+  opacity: 0;
+}
+
+.fade-700 {
+  transition: opacity 700ms ease;
+  opacity: 0;
+}
+
+.fade-800 {
+  transition: opacity 800ms ease;
+  opacity: 0;
+}
+
+.fade-900 {
+  transition: opacity 900ms ease;
+  opacity: 0;
+}
+
+.fade-1000 {
+  transition: opacity 1000ms ease;
+  opacity: 0;
+}
+
+.wh {
+  width: 100vw;
+  height: 100vh;
+}
+
+.fade-open {
+  opacity: 1;
+}
+
+.zoom-100 {
+  transition: all 100ms ease;
+  transform: scale(0);
+}
+
+.zoom-200 {
+  transition: all 200ms ease;
+  transform: scale(0);
+}
+
+.zoom-300 {
+  transition: all 300ms ease;
+  transform: scale(0);
+}
+
+.zoom-400 {
+  transition: all 400ms ease;
+  transform: scale(0);
+}
+
+.zoom-500 {
+  transition: all 500ms ease;
+  transform: scale(0);
+}
+
+.zoom-600 {
+  transition: all 600ms ease;
+  transform: scale(0);
+}
+
+.zoom-700 {
+  transition: all 700ms ease;
+  transform: scale(0);
+}
+
+.zoom-800 {
+  transition: all 800ms ease;
+  transform: scale(0);
+}
+
+.zoom-900 {
+  transition: all 900ms ease;
+  transform: scale(0);
+}
+
+.zoom-1000 {
+  transition: all 1000ms ease;
+  transform: scale(0);
+}
+
+.zoom-open {
+  transform: scale(1);
+}
+
+.AnimStart {
+  opacity: 0;
+  animation: 1s ease normal pulse;
+  animation-fill-mode: forwards;
+}
+
+.AnimEnd {
+  opacity: 1;
+  animation: 1s ease forwards pulse;
+  animation-fill-mode: forwards;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=Effect.module.css.map */
