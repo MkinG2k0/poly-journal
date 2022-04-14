@@ -1,31 +1,59 @@
 import style from './LeftMenu.module.scss';
-import {FC} from 'react';
-import {Button} from "../../Lib/Lib";
-import {Task, Home, Menu} from "../Icons/IconLeftMenu";
-import {NavButton} from "../NavButton/NavButton";
+import {Bag, Book, Chat, Contacts, Home, Layout, Menu, Settings, Task} from "../Icons/IconLeftMenu";
+import {Button, Map} from "../../Lib/Lib";
+import {Link} from "react-router-dom";
+import {FC, memo,} from 'react';
 
-interface LeftMenuProps {
 
-}
+export const LeftMenu: FC = memo(() => {
 
-export const LeftMenu: FC<LeftMenuProps> = ({}) => {
+    function toggleMenu() {
+
+    }
 
     return (
         <div className={style.wrap}>
             <div className={style.leftMenu}>
-                <NavButton>
-                    <Menu className={style.icon}/>
-                </NavButton>
-                <NavButton text={'NavButton'}>
-                    <Home className={style.icon}/>
-                </NavButton>
-                <NavButton>
-                    <Home className={style.icon}/>
-                </NavButton>
-                <NavButton>
-                    <Task className={style.icon}/>
-                </NavButton>
+                <BurgerButton onClick={toggleMenu}/>
+                <Map Comp={NavItem} data={listButtons}/>
             </div>
         </div>
     );
+})
+
+interface NavItemProps {
+    Icon: any,
+    text: string,
+    to: string
+}
+
+const NavItem: FC<NavItemProps> = ({Icon, to, text}) => {
+    return (
+        <Link to={to} className={style.navLink}>
+            <Button type={'link'}>
+                <Icon/>
+            </Button>
+            <span>{text}</span>
+        </Link>
+    )
 };
+
+const BurgerButton = ({onClick}) => (
+    <div className={style.navLink} onClick={onClick}>
+        <Button type={'link'}>
+            <Menu/>
+        </Button>
+        <span>{'Menu'}</span>
+    </div>
+)
+
+const listButtons: NavItemProps[] = [
+    {Icon: Home, text: 'Home', to: '/'},
+    {Icon: Bag, text: 'Bag', to: '/'},
+    {Icon: Book, text: 'Book', to: '/'},
+    {Icon: Layout, text: 'App', to: '/'},
+    {Icon: Chat, text: 'Chat', to: '/'},
+    {Icon: Task, text: 'Task', to: '/'},
+    {Icon: Contacts, text: 'Contacts', to: '/'},
+    {Icon: Settings, text: 'Settings', to: '/'},
+]

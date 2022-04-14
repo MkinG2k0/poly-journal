@@ -1,5 +1,5 @@
 import {Size} from "../../../Interface/Comp";
-import {FC} from "react";
+import {ReactElement} from "react";
 
 export interface IButton {
     text?: string;
@@ -15,6 +15,8 @@ export interface IButton {
     spin?: boolean;
     classIcon?: string;
     zero?: boolean;
+    Before?: ReactElement
+    After?: ReactElement
 }
 
 type typeB = "link" | "square" | "circle" | "smooth";

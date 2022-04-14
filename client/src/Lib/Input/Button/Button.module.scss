@@ -17,7 +17,7 @@ $names: (
   border: none;
   background: none;
   border-radius: 0.3em;
-  padding: 0.2em 0;
+  padding: 0.1em 0.1em;
   cursor: pointer;
   min-width: 0.7em;
   min-height: 0.7em;
@@ -26,7 +26,6 @@ $names: (
   display: flex;
   align-items: center;
   justify-content: center;
-
 
   & > img {
     width: 0.6em;
@@ -65,8 +64,8 @@ $names: (
 .square {
   color: white;
   background: $primary;
+
   border-radius: .1em;
-  box-shadow: $primary 0 3px 6px;
   transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
 }
 

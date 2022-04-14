@@ -18,6 +18,7 @@ export const Button: FC<IButton> = ({
                                         icon,
                                         spin,
                                         zero,
+                                        Before, After
                                     }) => {
 
 
@@ -25,7 +26,7 @@ export const Button: FC<IButton> = ({
         {
             [Style[type]]: type,
             [Style[status]]: status,
-            classB: classB,
+            [classB]: classB,
             "p-0 m-0": zero,
         },
         Style.btn, Style[`${type}_${status}`]
@@ -43,9 +44,11 @@ export const Button: FC<IButton> = ({
 
     return (
         <button onClick={onClick} className={ClassButton}>
+            {Before}
             {children}
             {img && <img className={classI} src={img} alt={""}/>}
             {text && <span className={ClassText}>{text}</span>}
+            {After}
         </button>
     );
 };

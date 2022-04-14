@@ -26,9 +26,6 @@ export const Layout: FC<LayoutProps> = () => {
             <div className={style.wrapContent}>
                 <div className={style.content}>
                     <Outlet/>
-                    <button onClick={() => setToggle()}>
-                        +++
-                    </button>
                 </div>
             </div>
         </div>
