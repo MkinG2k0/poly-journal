@@ -1,6 +1,44 @@
-.wrap {
+@use 'src/Style/mix';
 
-  .menu {
-    display: flex;
+.wrap {
+  display: grid;
+  grid-template-columns: 1.6em 1fr;
+  //transition: 1s all linear;
+
+  .wrapContent {
+    padding: .2em;
+
+    .content {
+      height: calc(100vh - 2.4em);
+      box-shadow: 0 2px 5px 5px mix.$color-gray inset;
+      border-radius: .3em;
+      padding: .2em;
+    }
+  }
+
+}
+
+.open {
+  grid-template-columns: 4em 1fr;
+  //animation: 3s ease forwards open;
+}
+
+.close {
+  grid-template-columns: 1.5em 1fr;
+  //animation: 3s ease backwards open;
+}
+
+@keyframes open {
+  0% {
+    grid-template-columns: 1.6em 1fr;
+  }
+  @for $i from 40 through 99 {
+    #{$i +'%' } {
+      grid-template-columns: #{$i / 10 / 2.5  }+em 1fr;
+    }
+  }
+  100% {
+    grid-template-columns: 4em 1fr;
   }
 }
+

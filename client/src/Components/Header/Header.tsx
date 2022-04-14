@@ -1,13 +1,13 @@
 import style from './Header.module.scss';
 import {FC} from 'react';
 import {Button, Input} from "../../Lib/Lib";
-import {ArrowDown, Calendar, MessageQuestion, Notification, Search} from "../Icons/Icons";
+import {ArrowDown, Calendar, MessageQuestion, Notification, Search} from "../Icons/IconHeader";
 
 
 export const Header: FC = () => {
 
     function handleSearch(value) {
-        console.log(value)
+        // console.log(value)
     }
 
     return (
@@ -21,6 +21,7 @@ export const Header: FC = () => {
                     </Input>
                 </div>
                 <div className={style.navProfile}>
+
                     <Button type={'circle'}>
                         <Calendar/>
                     </Button>

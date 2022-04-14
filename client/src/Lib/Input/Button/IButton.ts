@@ -1,4 +1,5 @@
 import {Size} from "../../../Interface/Comp";
+import {FC} from "react";
 
 export interface IButton {
     text?: string;
@@ -18,3 +19,4 @@ export interface IButton {
 
 type typeB = "link" | "square" | "circle" | "smooth";
 type statusB = "primary" | "danger" | "success" | "warning";
+

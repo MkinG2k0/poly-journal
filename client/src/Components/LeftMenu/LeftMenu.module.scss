@@ -1,0 +1,24 @@
+@use "src/Style/mix";
+
+.wrap {
+
+  padding: .2em;
+  grid-row-start: 1;
+  grid-row-end: 3;
+
+  .leftMenu {
+    display: flex;
+    flex-direction: column;
+    gap: .3em;
+
+    height: calc(100% - 0.4em);
+    box-shadow: 0 2px 5px 5px mix.$color-gray;
+    border-radius: .3em;
+    padding: 0.2em;
+
+    .icon {
+    
+    }
+  }
+}
+
