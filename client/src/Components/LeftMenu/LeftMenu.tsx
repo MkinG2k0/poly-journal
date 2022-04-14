@@ -3,19 +3,25 @@ import {Bag, Book, Chat, Contacts, Home, Layout, Menu, Settings, Task} from "../
 import {Button, Map} from "../../Lib/Lib";
 import {Link} from "react-router-dom";
 import {FC, memo,} from 'react';
+import {useStore} from "../../Redux/Store/Redux.hooks";
+import store from "../../Redux/Store/store";
+import {toggleLayout} from "../../Redux/Actions/Visible/Visible.Slice";
 
 
 export const LeftMenu: FC = memo(() => {
 
-    function toggleMenu() {
+    const {leftMenu} = useStore(({visible}) => visible.layout)
 
+    function toggleMenu() {
+        store.dispatch(toggleLayout('leftMenu'))
+        console.log(';sd')
     }
 
     return (
         <div className={style.wrap}>
             <div className={style.leftMenu}>
-                <BurgerButton onClick={toggleMenu}/>
-                <Map Comp={NavItem} data={listButtons}/>
+                <BurgerButton onClick={toggleMenu} open={leftMenu}/>
+                <Map Comp={NavItem} data={listButtons} spread={{open: leftMenu}}/>
             </div>
         </div>
     );
@@ -25,25 +31,26 @@ interface NavItemProps {
     Icon: any,
     text: string,
     to: string
+    open?: boolean
 }
 
-const NavItem: FC<NavItemProps> = ({Icon, to, text}) => {
+const NavItem: FC<NavItemProps> = ({Icon, to, text, open}) => {
     return (
         <Link to={to} className={style.navLink}>
-            <Button type={'link'}>
+            <Button type={'link'} zero={true}>
                 <Icon/>
             </Button>
-            <span>{text}</span>
+            {open && <span>{text}</span>}
         </Link>
     )
 };
 
-const BurgerButton = ({onClick}) => (
+const BurgerButton = ({onClick, open}) => (
     <div className={style.navLink} onClick={onClick}>
-        <Button type={'link'}>
+        <Button type={'link'} zero={true}>
             <Menu/>
         </Button>
-        <span>{'Menu'}</span>
+        {open && <span>{'Menu'}</span>}
     </div>
 )
 

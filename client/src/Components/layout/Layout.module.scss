@@ -2,7 +2,7 @@
 
 .wrap {
   display: grid;
-  grid-template-columns: 1.6em 1fr;
+  grid-template-columns: 1.6rem 1fr;
   //transition: 1s all linear;
 
   .wrapContent {
@@ -19,12 +19,12 @@
 }
 
 .open {
-  grid-template-columns: 4em 1fr;
+  grid-template-columns: auto 1fr;
   //animation: 3s ease forwards open;
 }
 
 .close {
-  grid-template-columns: 1.5em 1fr;
+  grid-template-columns: auto 1fr;
   //animation: 3s ease backwards open;
 }
 
@@ -34,11 +34,11 @@
   }
   @for $i from 40 through 99 {
     #{$i +'%' } {
-      grid-template-columns: #{$i / 10 / 2.5  }+em 1fr;
+      grid-template-columns: #{$i / 10 / 2.5  }+rem 1fr;
     }
   }
   100% {
-    grid-template-columns: 4em 1fr;
+    grid-template-columns: 4rem 1fr;
   }
 }
 

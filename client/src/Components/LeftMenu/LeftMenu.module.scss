@@ -2,7 +2,7 @@
 
 .wrap {
 
-  padding: .2em;
+  padding: .5rem;
   grid-row-start: 1;
   grid-row-end: 3;
 
@@ -11,11 +11,11 @@
     flex-direction: column;
     gap: .3em;
     overflow: hidden;
+    padding: .5rem;
 
     height: calc(100% - 0.4em);
     box-shadow: 0 2px 5px 5px mix.$color-gray inset;
     border-radius: .3em;
-    padding: 0.2em;
 
     .icon {
 
@@ -28,10 +28,12 @@
       text-decoration: none;
       color: black;
       gap: .2em;
+      width: max-content;
+      cursor: pointer;
 
       span {
         @extend .f-4;
-
+        width: 6em;
       }
     }
   }

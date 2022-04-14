@@ -27,13 +27,14 @@ $names: (
   align-items: center;
   justify-content: center;
 
-  & > img {
-    width: 0.6em;
-  }
 
   .bTitle {
     padding: 0 0.4em;
   }
+}
+
+.btnImg {
+  width: 0.6em;
 }
 
 // Type

@@ -12,12 +12,16 @@ interface LayoutProps {
 
 export const Layout: FC<LayoutProps> = () => {
 
-    const {setToggle, toggle} = useToggle()
+    const {setToggle, toggle} = useToggle(false)
 
     const classLayout = cn({
         [style.open]: toggle,
         [style.close]: !toggle,
     }, style.wrap)
+
+    function onClick() {
+        setToggle()
+    }
 
     return (
         <div className={classLayout}>
@@ -26,6 +30,9 @@ export const Layout: FC<LayoutProps> = () => {
             <div className={style.wrapContent}>
                 <div className={style.content}>
                     <Outlet/>
+                    <button onClick={onClick}>
+                        +
+                    </button>
                 </div>
             </div>
         </div>

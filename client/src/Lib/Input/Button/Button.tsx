@@ -1,4 +1,4 @@
-import Style from "./Button.module.scss";
+import style from "./Button.module.scss";
 import {IButton} from "./IButton";
 import {FC} from "react";
 import {cn} from "Helper/helper";
@@ -10,13 +10,10 @@ export const Button: FC<IButton> = ({
                                         size = 4,
                                         type = "",
                                         status = "",
-                                        classIcon = "",
                                         text,
                                         img,
                                         onClick,
                                         children,
-                                        icon,
-                                        spin,
                                         zero,
                                         Before, After
                                     }) => {
@@ -24,12 +21,12 @@ export const Button: FC<IButton> = ({
 
     const ClassButton = cn(
         {
-            [Style[type]]: type,
-            [Style[status]]: status,
+            [style[type]]: type,
+            [style[status]]: status,
             [classB]: classB,
             "p-0 m-0": zero,
         },
-        Style.btn, Style[`${type}_${status}`]
+        style.btn, style[`${type}_${status}`]
     );
 
     const ClassText = cn(
@@ -38,15 +35,19 @@ export const Button: FC<IButton> = ({
             [`f-${size}`]: size,
             "p-0 m-0": zero,
         },
-        Style.bTitle
+        style.bTitle
     );
+
+    const ClassImage = cn({
+        [classI]: classI
+    }, style.btnImg)
 
 
     return (
         <button onClick={onClick} className={ClassButton}>
             {Before}
             {children}
-            {img && <img className={classI} src={img} alt={""}/>}
+            {img && <img className={ClassImage} src={img} alt={""}/>}
             {text && <span className={ClassText}>{text}</span>}
             {After}
         </button>
