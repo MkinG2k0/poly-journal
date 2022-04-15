@@ -1,7 +1,8 @@
 import {Size} from "../../../Interface/Comp";
-import {ReactElement} from "react";
+import {CSSProperties, ReactElement} from "react";
 
 export interface IButton {
+    styleB?: CSSProperties
     text?: string;
     onClick?: () => void;
     classB?: string;

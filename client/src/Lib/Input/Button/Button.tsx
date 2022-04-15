@@ -15,7 +15,9 @@ export const Button: FC<IButton> = ({
                                         onClick,
                                         children,
                                         zero,
-                                        Before, After
+                                        Before,
+                                        After,
+                                        styleB,
                                     }) => {
 
 
@@ -44,7 +46,7 @@ export const Button: FC<IButton> = ({
 
 
     return (
-        <button onClick={onClick} className={ClassButton}>
+        <button onClick={onClick} className={ClassButton} style={styleB}>
             {Before}
             {children}
             {img && <img className={ClassImage} src={img} alt={""}/>}

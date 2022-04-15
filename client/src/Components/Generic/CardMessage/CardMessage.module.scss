@@ -1,0 +1,52 @@
+@use "src/Style/mix";
+
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  background: white;
+  padding: .3em;
+  border-radius: .3em;
+
+  .head {
+    display: flex;
+    justify-content: space-between;
+
+    .complexity {
+      @extend .f-4;
+
+    }
+
+    .Low {
+      @include mix.labelColor(mix.$color-green);
+    }
+
+    .Middle {
+      @include mix.labelColor(mix.$color-orange);
+
+    }
+
+    .High {
+      @include mix.labelColor(mix.$color-red);
+    }
+
+
+    .dot {
+      display: flex;
+      align-items: center;
+      gap: .1em;
+    }
+  }
+
+  .title {
+    @extend .f-3;
+  }
+
+  .description {
+    @extend .f-4;
+    color: mix.$color-gray-checked;
+    font-weight: 400;
+  }
+}
+

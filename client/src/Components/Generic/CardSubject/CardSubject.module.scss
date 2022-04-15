@@ -1,0 +1,68 @@
+@use "src/Style/mix";
+
+.wrap {
+  min-width: 7em;
+  display: flex;
+  flex-direction: column;
+  background: mix.$color-gray-faint;
+  border-radius: .3em;
+  padding: .3em;
+
+  .headWrap {
+    display: flex;
+    flex-direction: column;
+    gap: .3em;
+
+    .head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @extend .f-4;
+
+      .headLeft {
+        display: flex;
+        align-items: center;
+        gap: .3em;
+
+        .count {
+          background: mix.$color-gray;
+          color: mix.$color-gray-checked;
+          padding: .2em;
+          border-radius: 1em;
+          min-width: 1em;
+          text-align: center;
+        }
+      }
+
+      .headB {
+        border-radius: 30%;
+
+        * {
+          stroke: white;
+        }
+      }
+
+    }
+  }
+
+  .line {
+    height: .1em;
+    border-radius: 1em;
+  }
+
+  .content {
+    padding-top: .3em;
+    display: flex;
+    flex-direction: column;
+    gap: .3em;
+
+    .noContent {
+      display: flex;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      @extend .f-4;
+    }
+  }
+}
+

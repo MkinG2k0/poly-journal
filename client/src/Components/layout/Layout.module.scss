@@ -2,18 +2,16 @@
 
 .wrap {
   display: grid;
-  grid-template-columns: 1.6rem 1fr;
+  width: 100vw;
   //transition: 1s all linear;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
 
   .wrapContent {
     padding: .2em;
-
-    .content {
-      height: calc(100vh - 2.4em);
-      //box-shadow: 0 2px 5px 5px mix.$color-gray inset;
-      border-radius: .3em;
-      padding: .2em;
-    }
+    overflow: hidden;
+    height: calc(100vh - 2.4em);
+    border-radius: .3em;
   }
 
 }
@@ -30,7 +28,7 @@
 
 @keyframes open {
   0% {
-    grid-template-columns: 1.6em 1fr;
+    grid-template-columns: 1.6rem 1fr;
   }
   @for $i from 40 through 99 {
     #{$i +'%' } {

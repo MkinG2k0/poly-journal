@@ -1,7 +1,13 @@
-
 @mixin hover($color) {
   cursor: pointer;
   &:hover {
     background: $color;
   }
+}
+
+@mixin labelColor($color) {
+  background: lighten($color, 25);
+  color: darken($color, 20);
+  padding: .2em .3em;
+  border-radius: .3em;
 }

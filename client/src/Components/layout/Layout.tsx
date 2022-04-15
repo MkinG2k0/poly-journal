@@ -4,7 +4,6 @@ import {Outlet} from "react-router-dom";
 import {Header} from "../Header/Header";
 import {FC} from 'react';
 import {cn} from "../../Helper/helper";
-import {useToggle} from "../../Hook/Hooks";
 
 interface LayoutProps {
 
@@ -12,16 +11,8 @@ interface LayoutProps {
 
 export const Layout: FC<LayoutProps> = () => {
 
-    const {setToggle, toggle} = useToggle(false)
+    const classLayout = cn({}, style.wrap)
 
-    const classLayout = cn({
-        [style.open]: toggle,
-        [style.close]: !toggle,
-    }, style.wrap)
-
-    function onClick() {
-        setToggle()
-    }
 
     return (
         <div className={classLayout}>
@@ -30,9 +21,6 @@ export const Layout: FC<LayoutProps> = () => {
             <div className={style.wrapContent}>
                 <div className={style.content}>
                     <Outlet/>
-                    <button onClick={onClick}>
-                        +
-                    </button>
                 </div>
             </div>
         </div>

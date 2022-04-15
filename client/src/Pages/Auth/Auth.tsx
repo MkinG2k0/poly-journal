@@ -1,11 +1,7 @@
-// import style from './Auth.module.scss';
+import style from './Auth.module.scss';
 import {FC} from 'react';
 
-interface LoginProps {
-
-}
-
-export const Auth: FC<LoginProps> = ({}) => {
+export const Auth: FC = () => {
 
     return (
         <div>
