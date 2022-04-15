@@ -26,7 +26,6 @@ $alignItems: (flex-start, flex-end, center);
   &_container {
     display: flex;
     flex-wrap: wrap;
-
     height: 100%;
 
     @each $name, $value in $spacing {
@@ -42,25 +41,14 @@ $alignItems: (flex-start, flex-end, center);
 
   @for $i from 1 to 13 {
     &_xs_#{$i} {
-      @each $name, $value in $spacing {
-        &_spacing_#{$name} {
-          flex-basis: math.div($i,12) * 100% - #{$value};
-        }
-      }
-      //flex-basis: $i/12 * 100%;
+      flex-basis: math.div($i,12) * 100%;
     }
   }
 
   @include breakpoint("sm") {
     @for $i from 1 to 13 {
-      &_sm_#{$i} {
-        @each $name, $value in $spacing {
-          &_spacing_#{$name} {
-            flex-basis: math.div($i,12) * 100% - #{$value};
-            //flex-basis: calc(#{$i/12} * 100% - #{$value});
-          }
-        }
-        //flex-basis: $i/12 * 100%;
+      &_md_#{$i} {
+        flex-basis: math.div($i,12) * 100%;
       }
     }
   }
@@ -80,16 +68,6 @@ $alignItems: (flex-start, flex-end, center);
       }
     }
   }
-
-  //@each $name, $value in $spacing {
-  //  &_spacing_#{$name} {
-  //    padding: 0 calc(10vw - #{$value});
-  //
-  //    @if ($value == 0rem) {
-  //      padding: 0;
-  //    }
-  //  }
-  //}
 
   @each $value in $justifyContent {
     &_justifyContent_#{$value} {

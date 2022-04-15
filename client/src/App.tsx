@@ -5,6 +5,7 @@ import {Theme} from "./Lib/Lib";
 import "normalize.css";
 import 'Components/Style/Font.scss'
 import "Components/Style/Colors.css";
+import "Components/Style/Global.scss";
 
 export const App: FC = () =>
     (

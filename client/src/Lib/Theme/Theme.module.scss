@@ -2,21 +2,21 @@
 
 .wrap {
   font-size: clamp(1.5rem, 2vw + 1rem, 3rem);
+
 }
 
-.wrap > *::-webkit-scrollbar {
-  width: 0.5rem; /* ширина scrollbar */
+
+*::-webkit-scrollbar {
+  width: .1em; /* ширина scrollbar */
+  height: .4em;
 }
 
-.wrap > *::-webkit-scrollbar-track {
-  background: mix.$color-second; /* цвет дорожки */
+*::-webkit-scrollbar-track {
+  background: mix.$color-gray; /* цвет дорожки */
+  border-radius: 1em;
 }
 
-.wrap > *::-webkit-scrollbar-thumb {
-  background: mix.$color-base; /* padding вокруг плашки */
-}
-
-.wrap > *::selection {
-  background: mix.$color-second; /* Safari */
-  color: white;
+*::-webkit-scrollbar-thumb {
+  background-color: mix.$color-gray-checked; /* цвет плашки */
+  border-radius: 1em;
 }

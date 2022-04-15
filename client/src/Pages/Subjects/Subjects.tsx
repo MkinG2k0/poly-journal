@@ -8,7 +8,7 @@ import {CardMessage, CardMessageProps} from "../../Components/Generic/CardMessag
 export const Subjects: FC = () => {
     return (
         <div className={style.wrap}>
-            <span>Subjects</span>
+            <span className={style.a}>Subjects</span>
             <div className={style.filter}>
                 <Button
                     text={'Filter'}
@@ -26,10 +26,12 @@ export const Subjects: FC = () => {
                 </Button>
             </div>
             <div className={style.wrapContent}>
-                <CardSubject color={'#5030E5'} title={'Current task'} count={4} data={dataCard}/>
-                <CardSubject color={'#FFA500'} title={'Per month'} count={2} data={dataCard2}/>
-                <CardSubject color={'#76A5EA'} title={'During the day'} count={6} data={dataCard3}/>
-                <CardSubject color={'#8BC48A'} title={'Title'} count={3}/>
+                <div className={style.content}>
+                    <CardSubject color={'#5030E5'} title={'Current task'} count={4} data={dataCard}/>
+                    <CardSubject color={'#FFA500'} title={'Per month'} count={2} data={dataCard2}/>
+                    <CardSubject color={'#76A5EA'} title={'During the day'} count={6} data={dataCard3}/>
+                    <CardSubject color={'#8BC48A'} title={'Title'} count={3}/>
+                </div>
             </div>
         </div>)
 

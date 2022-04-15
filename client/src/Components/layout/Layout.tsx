@@ -18,10 +18,8 @@ export const Layout: FC<LayoutProps> = () => {
         <div className={classLayout}>
             <LeftMenu/>
             <Header/>
-            <div className={style.wrapContent}>
-                <div className={style.content}>
-                    <Outlet/>
-                </div>
+            <div className={style.content}>
+                <Outlet/>
             </div>
         </div>
     );

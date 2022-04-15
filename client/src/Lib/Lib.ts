@@ -1,4 +1,4 @@
-import {Grid} from "Lib/Grid/Grid";
+import {Grid, Row} from "Lib/Grid/Grid";
 import {Modal} from "Lib/Modal/Modal";
 import {
     Button,
@@ -28,4 +28,5 @@ export {
     Effect,
     Theme,
     Map,
+    Row,
 };
