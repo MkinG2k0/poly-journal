@@ -8,13 +8,9 @@ export const Home: FC = () => {
             Home
             <div>
                 <Grid container spacing={'sm'} xs={12}>
-                    {new Array(12).fill('').map(() => <Grid xs={1}>
+                    {new Array(4).fill('').map(() => <Grid xs={12} md={4} lg={2} sm={6} item>
                         <Box/>
-                    </Grid>)
-
-                    }
-
-
+                    </Grid>)}
                 </Grid>
             </div>
         </div>

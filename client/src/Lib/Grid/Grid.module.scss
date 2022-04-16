@@ -1,7 +1,7 @@
 $spacing: (
-        "sm": 8px,
-        "md": 16px,
-        "lg": 24px,
+        "sm": .2em,
+        "md": .3em,
+        "lg": .4em,
 );
 
 $breakpoints: (
@@ -29,6 +29,7 @@ $alignItems: (flex-start, flex-end, center);
 
   &_item {
     display: block;
+    box-sizing: border-box;
   }
 
   @for $i from 1 to 13 {
