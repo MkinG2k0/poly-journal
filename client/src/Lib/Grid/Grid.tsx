@@ -13,16 +13,13 @@ export const Grid: FC<GridProps> = ({
                                         sm,
                                         md,
                                         lg,
-                                        spacing = "none",
+                                        spacing,
                                         justifyContent,
                                         alignItems,
                                         ...props
                                     }) => {
-
-
     const classNames = cn({
         [styles.Grid_container]: container,
-        [styles[`Grid_container_spacing_${spacing}`]]: spacing,
         [styles.Grid_item]: item,
         [styles[`Grid_xs_${xs}`]]: xs,
         [styles[`Grid_sm_${sm}`]]: sm,
@@ -35,9 +32,7 @@ export const Grid: FC<GridProps> = ({
 
     return (
         <div className={classNames} {...props}>
-            <Spacing.Provider value={spacing}>
-                {children}
-            </Spacing.Provider>
+            {children}
         </div>
     );
 };

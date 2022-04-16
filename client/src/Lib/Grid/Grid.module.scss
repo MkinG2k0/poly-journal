@@ -1,10 +1,7 @@
-@use 'sass:math';
-
 $spacing: (
-        "sm": .5rem,
-        "md": 1rem,
-        "lg": 1.5rem,
-        "none":0rem,
+        "sm": 8px,
+        "md": 16px,
+        "lg": 24px,
 );
 
 $breakpoints: (
@@ -26,13 +23,8 @@ $alignItems: (flex-start, flex-end, center);
   &_container {
     display: flex;
     flex-wrap: wrap;
-    height: 100%;
 
-    @each $name, $value in $spacing {
-      &_spacing_#{$name} {
-        gap: $value;
-      }
-    }
+    height: 100%;
   }
 
   &_item {
@@ -41,14 +33,14 @@ $alignItems: (flex-start, flex-end, center);
 
   @for $i from 1 to 13 {
     &_xs_#{$i} {
-      flex-basis: math.div($i,12) * 100%;
+      flex-basis: $i/12 * 100%;
     }
   }
 
   @include breakpoint("sm") {
     @for $i from 1 to 13 {
-      &_md_#{$i} {
-        flex-basis: math.div($i,12) * 100%;
+      &_sm_#{$i} {
+        flex-basis: $i/12 * 100%;
       }
     }
   }
@@ -56,7 +48,7 @@ $alignItems: (flex-start, flex-end, center);
   @include breakpoint("md") {
     @for $i from 1 to 13 {
       &_md_#{$i} {
-        flex-basis: math.div($i,12) * 100%;
+        flex-basis: $i/12 * 100%;
       }
     }
   }
@@ -64,8 +56,18 @@ $alignItems: (flex-start, flex-end, center);
   @include breakpoint("lg") {
     @for $i from 1 to 13 {
       &_lg_#{$i} {
-        flex-basis: math.div($i,12) * 100%;
+        flex-basis: $i/12 * 100%;
       }
+    }
+  }
+
+  @each $name, $value in $spacing {
+    &_spacing_#{$name} {
+      margin: -$value;
+    }
+
+    &_spacing_#{$name} > &_item {
+      padding: $value;
     }
   }
 
@@ -80,6 +82,4 @@ $alignItems: (flex-start, flex-end, center);
       align-items: $value;
     }
   }
-
-
 }

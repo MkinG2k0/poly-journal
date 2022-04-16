@@ -1,7 +1,5 @@
-import style from './Home.module.scss';
 import {FC} from 'react';
-import {Grid, Row} from "../../Lib/Lib";
-
+import {Grid} from "../../Lib/Lib";
 
 export const Home: FC = () => {
 
@@ -9,10 +7,14 @@ export const Home: FC = () => {
         <div>
             Home
             <div>
-                <Grid container={true} xs={12}>
-                    <Row>
+                <Grid container spacing={'sm'} xs={12}>
+                    {new Array(12).fill('').map(() => <Grid xs={1}>
                         <Box/>
-                    </Row>
+                    </Grid>)
+
+                    }
+
+
                 </Grid>
             </div>
         </div>
@@ -21,6 +23,6 @@ export const Home: FC = () => {
 
 function Box() {
     return <div style={{background: 'gainsboro', width: '100%'}}>
-        aaa
+        {' aaa '}
     </div>
 }
