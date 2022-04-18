@@ -1,7 +1,7 @@
 import {Route, Routes as Switch, Navigate} from 'react-router-dom'
 import {Path, R_Auth, R_Home, R_Subjects} from "./Route";
 import {Auth} from "../Pages/Auth/Auth";
-import {Layout} from "Components/Layout/Layout";
+import {Layout} from "Components/layout/Layout";
 import {FC} from 'react';
 import {IRoute} from "./IRoute";
 
